@@ -52,6 +52,7 @@
 
 .form .submit-button input {
   font-size: 16px;
+  font-weight: bolder;
   background-color: #36493A;
   color: #fff;
   padding: .5em 1em;
