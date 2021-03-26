@@ -1,14 +1,143 @@
 .form{
   background-color: #FEFCF7;
   color: #36493A;
-  padding: 2em 20% 4em;
+  padding: 2em 0 3em 25%;
   font-family: Raleway;
+  font-weight: bolder;
 }
 
-.text-input {
+.form h3{
+  font-size: 37px;
+  padding: 0 5em;
+}
+.form label {
+  font-size: 18px;
+}
+
+.form .text-input {
   padding: 0 0 1em;
 }
 
+.form .text-input input {
+  margin-left: 1em;
+  width: 9em;
+  padding: 0 0.2em;
+  height: 2em;
+  margin-left: 1em;
+}
+
+.form .text-input.location input {
+  margin-left: 1em;
+  width: 22em;
+}
+
+.form .phone {
+  padding-left: 0.6em;
+}
+.form .location {
+  padding-left: 6.4em;
+}
+
+.form .checkbox-box {
+  padding: .5em 11.7em;
+}
+
+.form .checkbox-box label{
+  padding: 0.5em;
+}
+
+.form .submit-button {
+  margin: 1.5em 25em;
+}
+
+.form .submit-button input {
+  font-size: 16px;
+  background-color: #36493A;
+  color: #fff;
+  padding: .5em 1em;
+}
+
+.form .submit-button input:hover {
+  background-color: #E4A441;
+}
 .check-label {
   margin: 0.7em 0 0.4em 0;
+}
+
+@media only screen and (max-width: 1012px) {
+  .form {
+    padding: 2em 0 3em 20%;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .form {
+    padding: 2em 0 3em 12%;
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  .form {
+    padding: 2em 0 3em 5%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .form {
+    padding: 2em 0 3em 1em;
+  }
+
+  .form h3{
+    padding: 0 3em;
+  }
+
+  .form .phone {
+    padding-left: 0.3em;
+  }
+
+  .form .location {
+    padding-left: .3em;
+  }
+
+  .form .checkbox-box {
+    padding: .5em 8.7em;
+  }
+
+  .form .submit-button {
+    margin: 1.5em 20em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .form {
+    padding: 2em 0 3em em;
+  }
+
+  .form h3{
+    padding: 0 0.1em;
+  }
+
+  .form .phone {
+    padding-left: 0;
+    
+  }
+
+  .form .location {
+    padding-left: 0;
+    display: block;
+  }
+
+  .form .checkbox-box {
+    padding: .5em 5em;
+  }
+
+  .form .submit-button {
+    margin: 1.5em 14em;
+  }
+  .form .text-input.location input {
+    margin-left: 1em;
+    width: 16em;
+  }
+  
 }
