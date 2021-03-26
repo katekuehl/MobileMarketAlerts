@@ -4,3 +4,11 @@
   padding: 2em 20% 4em;
   font-family: Raleway;
 }
+
+.text-input {
+  padding: 0 0 1em;
+}
+
+.check-label {
+  margin: 0.7em 0 0.4em 0;
+}
