@@ -5,9 +5,9 @@ import background from '../../cover.png';
 class Banner extends Component {
   render() {
     return (
-      <div className="background" style={{ backgroundImage: `url(${background})` }}>
+      <div className="background" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(${background})` }}>
         <h1>Mobile Market Alerts</h1>
-        <p>feeding neighbors by connecting communities</p>
+        <p className="tagline">feeding neighbors by connecting communities</p>
         <p className="button">Get Alerts</p>
       </div>
     )

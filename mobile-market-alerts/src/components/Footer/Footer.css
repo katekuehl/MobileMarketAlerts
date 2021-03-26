@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+.footer-container {
+  background-color: #BA6F0F;
+  color: #FFF;
+  font-family: Raleway;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-container p {
+    margin: 0px;
+    padding: 25px 40px;
+}
