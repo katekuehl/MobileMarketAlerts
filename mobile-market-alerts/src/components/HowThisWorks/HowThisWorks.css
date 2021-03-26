@@ -1,0 +1,29 @@
+.works{
+    background-color: #E4A441;
+    color: #36493A;
+    font-family: Raleway, sans-serif;
+    font-weight: bolder;
+    padding: 4em 5% 8em 13%;
+}
+
+.works h3{
+    font-size: 37px;
+    padding: 0 0 0 30%;
+}
+
+.works .flex-container{
+    display: flex;
+    margin-top: 5em;
+
+}
+
+.works .flex-container .box{
+    padding: 1em;
+}
+.works .flex-container .icon{
+    width: 75%;
+}
+
+.works .flex-container p{
+    font-size: 18px;
+}
