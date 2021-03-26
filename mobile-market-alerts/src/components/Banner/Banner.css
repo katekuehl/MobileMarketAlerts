@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
+.background {
+  height: 500px;
+  background: center;
+  color: #FFF;
+  padding: 50px 0px 0px 50px;
+}
+
+h1 {
+  margin: 0px;
+  font-family: Arial Narrow;
+  font-size: 90px;
+}
+
+p {
+  font-family: Raleway;
+}
+
+.tagline {
+  font-size: 25px;
+  margin: 0px 0px 25px 0px;
+
+}
 
 .button {
-  border: 1px solid red;
+  width: 150px;
+  border: 1px solid #E4A441;
+  background-color: #E4A441;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bolder;
+  box-shadow: 1px 4px 16px 4px rgba(100,100,100,0.4);
+  margin: 0px 0px 25px 0px;
 }
