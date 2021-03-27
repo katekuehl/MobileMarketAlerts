@@ -5,7 +5,7 @@ import './Form.css';
 class Form extends Component {
   render() {
     return (
-        <form class="form" id="form">
+        <form class="form" id="form"> 
           <div class="container">
             <h3>Sign Up Here</h3>
           </div>
@@ -14,7 +14,7 @@ class Form extends Component {
             <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></input>
           </div>
           <div class="container text-input location">
-            <label for="location">Location</label>
+            <label for="location">Zip Code</label>
             <input type="text" id="location" name="location"></input>
           </div>
           <div class="container check-label check-location">
