@@ -1,0 +1,68 @@
+.works{
+    background-color: #E4A441;
+    color: #36493A;
+    font-family: Raleway, sans-serif;
+    font-weight: bolder;
+    padding: 4em 5% 8em 13%;
+}
+
+.works h3{
+    font-size: 37px;
+    padding: 0 0 0 30%;
+}
+
+.works .flex-container{
+    display: flex;
+    margin-top: 5em;
+}
+
+.works .flex-container .box{
+    padding: 1em;
+}
+.works .flex-container .icon{
+    width: 75%;
+}
+
+.works .flex-container p{
+    font-size: 18px;
+}
+@media only screen and (max-width: 800px) {
+    .works h3{
+        padding: 0 0 0 26%;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .works .flex-container{
+        display: block;
+    }
+    .works h3{
+        padding: 0 0 0 17%;
+    }
+    .works .flex-container{
+        text-align: center;
+        padding: 0 0 0 12%;
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 590px) {
+
+    .works .flex-container{
+        padding: 0;
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 470px) {
+    .works h3{
+        padding: 0 0 0 5%;
+    }
+
+}
+@media only screen and (max-width: 400px) {
+    .works {
+        padding: 2em 0 3em 1em;
+      }
+
+
+}

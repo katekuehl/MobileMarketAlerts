@@ -20,7 +20,11 @@ class Form extends Component {
   render() {
     const {phone} = this.state
     return (
+<<<<<<< HEAD
         <form onSubmit={this.handleSubmit} class="form" id="form" action="http://localhost:5000/" method="POST">
+=======
+        <form class="form" id="form">
+>>>>>>> 8f774c9cd8c9ff1d2622f831797a115cb2beaa77
           <div class="container">
             <h3>Sign Up Here</h3>
             <p>Phone number is: {phone}</p>
