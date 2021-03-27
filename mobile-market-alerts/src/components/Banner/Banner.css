@@ -1,22 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 .background {
-  height: 500px;
+  height: 600px;
+  width: auto;
   background: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #FFF;
   padding: 50px 0px 0px 50px;
 }
 
 h1 {
   margin: 0px;
-  font-family: Arial Narrow;
+  font-family: 'Arial Narrow', Arial, sans-serif;
   font-size: 90px;
 }
 
 p {
   font-family: Raleway;
+  font-weight: bolder;
 }
 
+.banner-text{
+  padding: 7em 5em 0 11%;
+}
 .tagline {
   font-size: 25px;
   margin: 0px 0px 25px 0px;
@@ -34,4 +41,13 @@ p {
   font-weight: bolder;
   box-shadow: 1px 4px 16px 4px rgba(100,100,100,0.4);
   margin: 0px 0px 25px 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  .background {
+    background: none;
+  }
+  .banner-text{
+    padding: 2em 2em 0 16%;
+  }
 }
