@@ -14,7 +14,6 @@
 .works .flex-container{
     display: flex;
     margin-top: 5em;
-
 }
 
 .works .flex-container .box{
@@ -26,4 +25,44 @@
 
 .works .flex-container p{
     font-size: 18px;
+}
+@media only screen and (max-width: 800px) {
+    .works h3{
+        padding: 0 0 0 26%;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .works .flex-container{
+        display: block;
+    }
+    .works h3{
+        padding: 0 0 0 17%;
+    }
+    .works .flex-container{
+        text-align: center;
+        padding: 0 0 0 12%;
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 590px) {
+
+    .works .flex-container{
+        padding: 0;
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 470px) {
+    .works h3{
+        padding: 0 0 0 5%;
+    }
+
+}
+@media only screen and (max-width: 400px) {
+    .works {
+        padding: 2em 0 3em 1em;
+      }
+
+
 }
