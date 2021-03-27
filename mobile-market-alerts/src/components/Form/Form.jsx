@@ -6,47 +6,76 @@ class Form extends Component {
   constructor(props){
     super(props)
     this.state = {
-      phone: null
+      farmersMarket: false,
+      freeMeals: false,
+      foodShelves: false,
+      phone: null,
+      zipCode: null
     }
   }
   handleSubmit = (event) => {
     event.preventDefault()
-  }
+    let arr = [];
+    for (var key in this.state) {
+      if(this.state[key] === true) {
+        arr.push(key);
+      }
+    }
+    let checkData = {
+      check_test: arr.toString()
+    };
+    console.log(checkData)
 
-  handleInputChange = () => {
+    const data = new FormData(event.target);
+    console.log(data.getAll('title'))
+    fetch('http://127.0.0.1:5000', {
+      method: 'POST',
+      body: data
+    });
+  } ;
 
+  handleInputChange = (event) => {
+    console.log(event.target.name)
+    console.log(event.target.value)
+    if(event.target.type === "checkbox")
+      this.setState({[event.target.name] : event.target.checked});
+    else
+      this.setState({[event.target.name] : event.target.value});
   }
 
   render() {
-    const {phone} = this.state
+    const {farmersMarket, freeMeals, foodShelves, phone, zipCode} = this.state
     return (
-        <form onSubmit={this.handleSubmit} class="form" id="form" action="http://localhost:5000/" method="POST">
+        <form onSubmit={this.handleSubmit} class="form" id="form" method="POST">
           <div class="container">
             <h3>Sign Up Here</h3>
-            <p>Phone number is: {phone}</p>
-
+            <p>Farmers market is: {farmersMarket ? "yes" : "no"}</p>
+            <p>Free meals is: {freeMeals ? "yes" : "no"}</p>
+            <p>Food shelves is: {foodShelves ? "yes" : "no"}</p>
+            <p>Phone number is: {phone ? "content entered" : "not set"}</p>
+            <p>Zip code is {zipCode ? "content entered" : "not set"}</p>
           </div>
           <div class="container text-input phone">
             <label for="phone">Cell Phone Number</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></input>
+            <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx" onChange={this.handleInputChange}></input>
           </div>
           <div class="container text-input location">
-            <label for="location">Location</label>
-            <input type="text" id="location" name="location"></input>
+            <label for="location">Zip Code</label>
+            <input type="text" id="location" name="zipCode" onChange={this.handleInputChange}></input>
           </div>
           <div class="container check-label check-location">
             <label>Check All That Apply:</label>
           </div>
           <div class="container checkbox-box">
-            <input type="checkbox" class="checkbox-input" name="farmers-market" value="farmers-market"></input>
+            <input type="checkbox" class="checkbox-input" name="farmersMarket" value="farmersMarket" checked={farmersMarket} onChange={this.handleInputChange}></input>
             <label for="farmers-market">Farmers Market</label>
           </div>
           <div class="container checkbox-box">
-            <input type="checkbox" class="checkbox-input" name="free-meals" value="free-meals"></input>
+            <input type="checkbox" class="checkbox-input" name="freeMeals" value="freeMeals" checked={freeMeals} onChange={this.handleInputChange}></input>
             <label for="free-meals">Free Meals</label>
           </div>
           <div class="container checkbox-box">
-            <input type="checkbox" class="checkbox-input" name="food-shelves" value="food-shelves"></input>
+            <input type="checkbox" class="checkbox-input" name="foodShelves" value="foodShelves" checked={foodShelves} onChange={this.handleInputChange}></input>
             <label for="food-shelves">Food Shelves</label>
           </div>
             <div class="container submit-button">
