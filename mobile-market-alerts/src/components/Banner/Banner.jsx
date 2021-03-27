@@ -9,7 +9,7 @@ class Banner extends Component {
         <div class="banner-text">
           <h1>Mobile Market Alerts</h1>
           <p className="tagline">feeding neighbors by connecting communities</p>
-          <p className="button">Get Alerts</p>
+          <p className="button"><a href="#form">Get Alerts</a></p>
           </div>
       </div>
     )

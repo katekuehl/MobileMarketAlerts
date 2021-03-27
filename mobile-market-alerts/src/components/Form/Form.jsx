@@ -5,7 +5,7 @@ import './Form.css';
 class Form extends Component {
   render() {
     return (
-        <form class="form">
+        <form class="form" id="form">
           <div class="container">
             <h3>Sign Up Here</h3>
           </div>
