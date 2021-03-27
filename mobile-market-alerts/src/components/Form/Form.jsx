@@ -3,6 +3,12 @@ import './Form.css';
 
 
 class Form extends Component {
+
+  testFunction(e) {
+    alert('Your preferences were submitted successfully!');
+    console.log('it works!');
+  }
+
   render() {
     return (
         <form class="form" id="form">
@@ -33,10 +39,10 @@ class Form extends Component {
             <label for="foodshelves">Food Shelves</label>
           </div>
             <div class="container submit-button">
-            <input type="submit" name="submit" value="submit"></input>
+            <input type="submit" name="submit" value="submit" onClick={ this.testFunction }></input>
           </div>
         </form>
-        
+
     )
   }
 }
