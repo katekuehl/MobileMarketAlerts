@@ -1,13 +1,30 @@
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import React, { Component} from 'react';
 import './Form.css';
 
 class Form extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      phone: null
+    }
+  }
+  handleSubmit = (event) => {
+    event.preventDefault()
+  }
+
+  handleInputChange = () => {
+
+  }
+
   render() {
+    const {phone} = this.state
     return (
-        <form class="form">
+        <form onSubmit={this.handleSubmit} class="form" id="form" action="http://localhost:5000/" method="POST">
           <div class="container">
             <h3>Sign Up Here</h3>
+            <p>Phone number is: {phone}</p>
+
           </div>
           <div class="container text-input phone">
             <label for="phone">Cell Phone Number</label>
@@ -21,16 +38,16 @@ class Form extends Component {
             <label>Check All That Apply:</label>
           </div>
           <div class="container checkbox-box">
-            <input type="checkbox" class="checkbox-input" name="farmersmarket" value="Farmers Market"></input>
-            <label for="farmersmarket">Farmers Market</label>
+            <input type="checkbox" class="checkbox-input" name="farmers-market" value="farmers-market"></input>
+            <label for="farmers-market">Farmers Market</label>
           </div>
           <div class="container checkbox-box">
-            <input type="checkbox" class="checkbox-input" name="freemeals" value="Free Meals"></input>
-            <label for="freemeals">Free Meals</label>
+            <input type="checkbox" class="checkbox-input" name="free-meals" value="free-meals"></input>
+            <label for="free-meals">Free Meals</label>
           </div>
           <div class="container checkbox-box">
-            <input type="checkbox" class="checkbox-input" name="foodshelves" value="Food Shelves"></input>
-            <label for="foodshelves">Food Shelves</label>
+            <input type="checkbox" class="checkbox-input" name="food-shelves" value="food-shelves"></input>
+            <label for="food-shelves">Food Shelves</label>
           </div>
             <div class="container submit-button">
             <input type="submit" name="submit" value="submit"></input>
@@ -40,5 +57,6 @@ class Form extends Component {
     )
   }
 }
-
+//ReactDOM.render(document.getElementById('form'));
 export default Form;
+
